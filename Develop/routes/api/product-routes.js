@@ -47,6 +47,7 @@ router.post('/', async (req, res) => {
       stock: req.body.stock,
       category_id: req.body.category_id,
     })
+    res.status(200).json(productData)
   } catch (err) {
     res.status(400).json(err)
   }
